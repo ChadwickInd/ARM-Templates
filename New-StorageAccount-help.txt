@@ -1,0 +1,7 @@
+//these are the parameters to set before deployment
+$parameters = @{
+    storageAccountName = "almquiststorage2east"
+    location = "eastus"
+}
+//this is the command to run this deployment
+New-AzResourceGroupDeployment -TemplateFile '.\New-StorageAccount.json' -TemplateParameterObject $parameters
