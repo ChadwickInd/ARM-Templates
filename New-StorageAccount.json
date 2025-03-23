@@ -5,7 +5,7 @@
     "storageAccountName": {
       "type": "string",
       "minLength": 3,
-      "maxLength": 24
+      "maxLength": 25
     },
     "location": {
         "type": "string",
