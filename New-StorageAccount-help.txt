@@ -1,7 +1,13 @@
 //these are the parameters to set before deployment
 $parameters = @{
-    storageAccountName = "almquiststorage2east"
-    location = "eastus"
+    storageAccountName = "almquiststorage2west"
+    location = "westus"
 }
 //this is the command to run this deployment
 New-AzResourceGroupDeployment -TemplateFile '.\New-StorageAccount.json' -TemplateParameterObject $parameters
+
+//here is the template uri
+https://github.com/ChadwickInd/ARM-Templates/blob/main/New-StorageAccount.json
+
+//command to run deployment using the github uri
+New-AzResourceGroupDeployment -TemplateUri "https://raw.githubusercontent.com/your-username/your-repo/main/your-template.json" -TemplateParameterObject $parameters
