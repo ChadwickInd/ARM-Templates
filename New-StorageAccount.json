@@ -4,7 +4,7 @@
   "parameters": {
     "storageAccountName": {
       "type": "string",
-      "defaultValue": "almquiststorageaccount",
+      "defaultValue": "defaultstorageaccount",
       "minLength": 3,
       "maxLength": 24
     },
@@ -22,9 +22,10 @@
       "sku": {
         "name": "Standard_LRS"
       },
-      "kind": "StorageV2",
+      "kind": "BlobStorage",
       "properties": {
-        "supportsHttpsTrafficOnly": true
+        "supportsHttpsTrafficOnly": true,
+        "accessTier": "Cool"
       }
     }
   ]
